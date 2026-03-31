@@ -1,11 +1,9 @@
 # Dependencies
 node_modules/
-next/node_modules/
-fiverr-client-package/**/node_modules/
+next/
 
 # Build output
 .next/
-next/.next/
 out/
 dist/
 
@@ -28,5 +26,5 @@ pnpm-debug.log*
 Thumbs.db
 .vscode/
 
-# Archive / delivery artifacts
+# Archive files
 *.zip

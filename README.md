@@ -1,55 +1,51 @@
-﻿# ECHO ANIME - Client Delivery Package
+# SkillForge.ai
 
-This package is production-ready and includes:
+SkillForge.ai is a production-ready single-page learning analysis dashboard built with Next.js 15, TypeScript, Tailwind CSS v4, Shadcn-style UI primitives, Lucide icons, `next-themes`, Recharts, and `jsPDF`.
 
-- Static version (deploy anywhere): `static/`
-- Next.js version (App Router): `next/`
-- NFT-ready export flow: single PNG/JSON per card and full ZIP bundle
+It helps serious learners compare free learning resources, interpret learning-science guidance, and generate evidence-based 30/60/90-day learning architectures for popular 2026 skill paths.
 
-## 1) Review Summary (What was improved)
+## Features
 
-- Refactor: split into clean HTML/CSS/JS structure, removed inline handlers, centralized reusable functions.
-- Visual + responsive: stronger art direction, improved typography scale, improved mobile card layout and controls.
-- NFT export complete: per-piece `1024x1024 PNG`, metadata JSON, and one-click full collection ZIP (`images/` + `metadata/`).
-- Performance + a11y: delegated event handling, reduced-motion support, focus-visible states, semantic structure, skip link.
-- React/Next.js version: complete App Router implementation with matching features.
+- Hero input with guided prompt entry and quick-select chips for popular skills
+- Hardcoded professional library of 18 free learning resources and 12 skill tracks
+- Resource Analysis Engine with comparison table, expandable details, radar chart, and tailored research insights
+- Path Forge with 4 structured learning architectures per skill, measurable checkpoints, and 30/60/90-day roadmaps
+- Prioritization matrix for effort versus mastery impact
+- Explore Library with Tech, Business, Creative, and Soft Skills filters
+- Shareable analysis URLs via `?skill=` query params
+- Client-side PDF-style export using `jsPDF`
+- Dark mode default with a precise slate-and-teal visual system
 
-## 2) Delivery Contents
+## Stack
 
-- `static/index.html`
-- `static/assets/styles.css`
-- `static/assets/app.js`
-- `next/package.json`
-- `next/app/layout.js`
-- `next/app/page.js`
-- `next/app/globals.css`
-- `next/lib/pieces.js`
+- Next.js 15 App Router
+- TypeScript
+- Tailwind CSS v4
+- Shadcn-style UI primitives
+- Lucide React
+- `next-themes`
+- Recharts
+- `jsPDF`
 
-## 3) How to run
+## Project Structure
 
-### Static
-1. Open `static/index.html` in a browser.
-2. For best reliability (CDN JSZip), serve with a local server:
-   - `npx serve static`
-   - or VS Code Live Server
+```text
+app/
+components/
+lib/
+```
 
-### Next.js
-1. `cd next`
-2. `npm install`
-3. `npm run dev`
-4. Open `http://localhost:3000`
+## Setup
 
-## 4) Client handoff notes
+```bash
+npm install
+npm run dev
+```
 
-- Replace `ipfs://YOUR_CID_HERE/` with the real CID after upload.
-- `external_url` currently points to `https://echoanime.art` placeholder.
-- Naming is CID-friendly and deterministic.
+Open `http://localhost:3000`.
 
-## 5) Acceptance checklist
+## Notes
 
-- [x] Responsive desktop + mobile layout
-- [x] Individual PNG export works
-- [x] Individual metadata export works
-- [x] Full ZIP pack export works
-- [x] Rarity filter works
-- [x] Keyboard and focus accessibility basics are in place
+- All sample analysis data lives in `lib/skillsData.ts`.
+- The current entry point is `app/page.tsx`, which renders `components/skillforge-app.tsx`.
+- This repository is intentionally trimmed to the SkillForge app only.
